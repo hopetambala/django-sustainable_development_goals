@@ -1,157 +1,46 @@
 Goal,Target,Indicator
-,,"'Adolescent birth rate, per 1,000 women'"
-,,'Agriculture support estimate for OECD countries as percentage of their GDP'
-,,"'Agriculture support estimate for OECD countries, million US$'"
-,,'AIDS deaths'
-,,'AIDS deaths (lower bound)'
-,,'AIDS deaths (upper bound)'
-,,'AIDS orphans (one or both parents)'
-,,"'Antenatal care coverage, at least four visits, percentage'"
-,,"'Antenatal care coverage, at least one visit, percentage'"
-,,"'Antiretroviral therapy coverage among people with advanced HIV infection, percentage'"
-,,"'Antiretroviral therapy coverage among people with advanced HIV infection, percentage (lower bound)'"
-,,"'Antiretroviral therapy coverage among people with advanced HIV infection, percentage (upper bound)'"
-,,'Average tariffs imposed by developed countries on agricultural products from developing countries'
-,,'Average tariffs imposed by developed countries on clothings from developing countries'
-,,'Average tariffs imposed by developed countries on textiles from developing countries'
+,"Reduce by two-thirds, between 1990 and 2015, the under-five mortality rate ","'Children 1 year old immunized against measles, percentage'"
+,"Reduce by two-thirds, between 1990 and 2015, the under-five mortality rate ","'Children under five mortality rate per 1,000 live births'"
+,"Reduce by two-thirds, between 1990 and 2015, the under-five mortality rate ","'Infant mortality rate (0-1 year) per 1,000 live births'"
 ,"Reduce by three quarters, between 1990 and 2015, the maternal mortality ratio ","'Births attended by skilled health personnel, percentage'"
+,"Reduce by three quarters, between 1990 and 2015, the maternal mortality ratio ","'Maternal mortality ratio per 100,000 live births'"
+,"Reduce by three quarters, between 1990 and 2015, the maternal mortality ratio ","'Maternal mortality ratio per 100,000 live births (Lower bound)'"
+,"Reduce by three quarters, between 1990 and 2015, the maternal mortality ratio ","'Maternal mortality ratio per 100,000 live births (Upper bound)'"
 ,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,"'Carbon dioxide emissions (CO2), kg CO2 per $1 GDP (PPP) (CDIAC)'"
 ,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,"'Carbon dioxide emissions (CO2), kg CO2 per $1 GDP (PPP) (UNFCCC)'"
 ,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,"'Carbon dioxide emissions (CO2), metric tons of CO2 per capita (CDIAC)'"
 ,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,"'Carbon dioxide emissions (CO2), metric tons of CO2 per capita (UNFCCC)'"
 ,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,"'Carbon dioxide emissions (CO2), thousand metric tons of CO2 (CDIAC)'"
 ,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,"'Carbon dioxide emissions (CO2), thousand metric tons of CO2 (UNFCCC)'"
-,"Reduce by two-thirds, between 1990 and 2015, the under-five mortality rate ","'Children 1 year old immunized against measles, percentage'"
-,"Halve, between 1990 and 2015, the proportion of people who suffer from hunger ","'Children under 5 moderately or severely underweight, percentage'"
-,"Halve, between 1990 and 2015, the proportion of people who suffer from hunger ","'Children under 5 severely underweight, percentage'"
-,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Children under 5 sleeping under insecticide-treated bed nets, percentage'"
-,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Children under 5 with fever being treated with anti-malarial drugs, percentage'"
-,"Reduce by two-thirds, between 1990 and 2015, the under-five mortality rate ","'Children under five mortality rate per 1,000 live births'"
-,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'Condom use at last high-risk sex, 15-24 years old, men, percentage'"
-,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'Condom use at last high-risk sex, 15-24 years old, women, percentage'"
-,,"'Condom use to overall contraceptive use among currently married women 15-49 years old, percentage'"
 ,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,'Consumption of all Ozone-Depleting Substances in ODP metric tons'
-,,'Consumption of ozone-depleting CFCs in ODP metric tons'
-,,"'Current contraceptive use among married women 15-49 years old, any method, percentage'"
-,,"'Current contraceptive use among married women 15-49 years old, condom, percentage'"
-,,"'Current contraceptive use among married women 15-49 years old, modern methods, percentage'"
-,,"'Debt relief committed under HIPC initiative, cumulative million US$ in end-2009 NPV terms'"
-,,"'Debt relief delivered in full under MDRI initiative, cumulative million US$ in end-2009 NPV terms'"
-,,'Debt service as percentage of exports of goods and services and net income'
-,,"'Developed country imports from developing countries, admitted duty free, percentage'"
-,,"'Developed country imports from the LDCs, admitted duty free, percentage'"
-,"Achieve full and productive employment and decent work for all, including women and young people ","'Employment-to-population ratio, both sexes, percentage'"
-,"Achieve full and productive employment and decent work for all, including women and young people ","'Employment-to-population ratio, men, percentage'"
-,"Achieve full and productive employment and decent work for all, including women and young people ","'Employment-to-population ratio, women, percentage'"
-,,"'Energy use (kg oil equivalent) per $1,000 GDP (Constant 2005 PPP $)'"
+,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,'Proportion of fish stocks within safe biological limits'
+,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,"'Proportion of land area covered by forest, percentage'"
 ,"In cooperation with the private sector, make available the benefits of new technologies, especially information and communications ",'Fixed-telephone subscriptions'
 ,"In cooperation with the private sector, make available the benefits of new technologies, especially information and communications ",'Fixed-telephone subscriptions per 100 inhabitants'
-,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015 ",'Gender Parity Index in primary level enrolment'
-,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2016",'Gender Parity Index in secondary level enrolment'
-,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2017",'Gender Parity Index in tertiary level enrolment'
-,"Achieve full and productive employment and decent work for all, including women and young people ","'Growth rate of GDP per person employed, percentage'"
-,,"'HIV incidence rate, 15-49 years old, percentage (lower bound)'"
-,,"'HIV incidence rate, 15-49 years old, percentage (mid-point)'"
-,,"'HIV incidence rate, 15-49 years old, percentage (upper bound)'"
-,,"'HIV prevalence rate, men 15-49 years old, in national based surveys'"
-,,"'HIV prevalence rate, women 15-49 years old, in national based surveys'"
-,"Reduce by two-thirds, between 1990 and 2015, the under-five mortality rate ","'Infant mortality rate (0-1 year) per 1,000 live births'"
 ,"In cooperation with the private sector, make available the benefits of new technologies, especially information and communications ",'Internet users'
 ,"In cooperation with the private sector, make available the benefits of new technologies, especially information and communications ",'Internet users per 100 inhabitants'
-,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Literacy rates of 15-24 years old, both sexes, percentage'"
-,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Literacy rates of 15-24 years old, men, percentage'"
-,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Literacy rates of 15-24 years old, women, percentage'"
-,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Malaria death rate per 100,000 population, ages 0-4'"
-,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Malaria death rate per 100,000 population, all ages'"
-,,'Marine areas protected to sea areas under national jurisdiction (0-200 nautical miles)'
-,,"'Marine areas protected to territorial waters, percentage'"
-,,"'Marine areas protected, sq. km.'"
-,"Reduce by three quarters, between 1990 and 2015, the maternal mortality ratio ","'Maternal mortality ratio per 100,000 live births'"
-,"Reduce by three quarters, between 1990 and 2015, the maternal mortality ratio ","'Maternal mortality ratio per 100,000 live births (Lower bound)'"
-,"Reduce by three quarters, between 1990 and 2015, the maternal mortality ratio ","'Maternal mortality ratio per 100,000 live births (Upper bound)'"
-,,"'Men 15-24 years old with comprehensive correct knowledge of HIV/AIDS, percentage'"
 ,"In cooperation with the private sector, make available the benefits of new technologies, especially information and communications ",'Mobile-cellular subscriptions'
 ,"In cooperation with the private sector, make available the benefits of new technologies, especially information and communications ",'Mobile-cellular subscriptions per 100 inhabitants'
-,,'Net ODA as percentage of OECD/DAC donors GNI'
-,,'Net ODA to LDCs as percentage of OECD/DAC donors GNI'
-,,"'Net ODA to LDCs, million US$'"
-,,"'Net ODA, million US$'"
-,,"'Notified cases of malaria per 100,000 population'"
-,,"'ODA provided to help build trade capacity, percentage'"
-,,'ODA received in landlocked developing countries as percentage of their GNI'
-,,"'ODA received in landlocked developing countries, million US$'"
-,,'ODA received in small islands developing States as percentage of their GNI'
-,,"'ODA received in small islands developing States, million US$'"
-,,"'ODA that is untied, million US$'"
-,,"'ODA that is untied, percentage'"
-,,'ODA to basic social services as percentage of sector-allocable ODA'
-,,"'ODA to basic social services, million US$'"
-,,"'People living with HIV, 15-49 years old, percentage'"
-,,"'People living with HIV, 15-49 years old, percentage (lower bound)'"
-,,"'People living with HIV, 15-49 years old, percentage (upper bound)'"
-,,'Percentage of HIV-infected pregnant women who received antiretroviral drugs to reduce the risk for mother-to-child transmission (lower bound)'
-,,'Percentage of HIV-infected pregnant women who received antiretroviral drugs to reduce the risk for mother-to-child transmission (Mid point)'
-,,'Percentage of HIV-infected pregnant women who received antiretroviral drugs to reduce the risk for mother-to-child transmission (upper bound)'
-,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Percentage of pupils starting grade 1 who reach last grade of primary, both sexes'"
-,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Percentage of pupils starting grade 1 who reach last grade of primary, boys'"
-,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Percentage of pupils starting grade 1 who reach last grade of primary, girls'"
-,,'Personal computers'
-,,'Personal computers per 100 inhabitants'
-,"Halve, between 1990 and 2015, the proportion of people whose income is less than one dollar a day ","'Poorest quintile's share in national income or consumption, percentage'"
-,"Halve, between 1990 and 2015, the proportion of people whose income is less than one dollar a day ","'Population below $1.25 (PPP) per day, percentage'"
-,,"'Population below national poverty line, rural, percentage'"
-,,"'Population below national poverty line, total, percentage'"
-,,"'Population below national poverty line, urban, percentage'"
-,,"'Population undernourished, millions'"
-,,"'Population undernourished, percentage'"
-,,"'Population using solid fuels, percentage'"
-,,"'Population with access to essential drugs, percentage'"
-,"Halve, between 1990 and 2015, the proportion of people whose income is less than one dollar a day ","'Poverty gap ratio at $1.25 a day (PPP), percentage'"
-,,"'Primary completion rate, both sexes'"
-,,"'Primary completion rate, boys'"
-,,"'Primary completion rate, girls'"
-,"Achieve full and productive employment and decent work for all, including women and young people ","'Proportion of employed people living below $1 (PPP) per day, percentage'"
-,,'Proportion of fish stocks within safe biological limits'
-,,"'Proportion of land area covered by forest, percentage'"
-,"Achieve full and productive employment and decent work for all, including women and young people ","'Proportion of own-account and contributing family workers in total employment, both sexes, percentage'"
-,"Achieve full and productive employment and decent work for all, including women and young people ","'Proportion of own-account and contributing family workers in total employment, men, percentage'"
-,"Achieve full and productive employment and decent work for all, including women and young people ","'Proportion of own-account and contributing family workers in total employment, women, percentage'"
-,,'Proportion of species threatened with extinction'
-,,"'Proportion of the population using improved drinking water sources, rural'"
-,,"'Proportion of the population using improved drinking water sources, total'"
-,,"'Proportion of the population using improved drinking water sources, urban'"
-,,"'Proportion of the population using improved sanitation facilities, rural'"
-,,"'Proportion of the population using improved sanitation facilities, total'"
-,,"'Proportion of the population using improved sanitation facilities, urban'"
-,,"'Proportion of total water resources used, percentage'"
-,,"'Purchasing power parities (PPP) conversion factor, local currency unit to international dollar'"
-,,'Ratio of school attendance rate of orphans to school attendance rate of non orphans'
-,,"'Ratio of youth unemployment rate to adult unemployment rate, both sexes'"
-,,"'Ratio of youth unemployment rate to adult unemployment rate, men'"
-,,"'Ratio of youth unemployment rate to adult unemployment rate, women'"
-,,'School attendance rate of children aged 10-14 both of whose parents are alive and who live with at least one parent'
-,,'School attendance rate of orphans aged 10-14'
-,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015 ",'Seats held by men in national parliament'
-,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2016",'Seats held by women in national parliament'
-,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2017","'Seats held by women in national parliament, percentage'"
-,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015 ",'Share of women in wage employment in the non-agricultural sector'
-,,"'Share of youth unemployed to total unemployed, both sexes'"
-,,"'Share of youth unemployed to total unemployed, men'"
-,,"'Share of youth unemployed to total unemployed, women'"
-,,"'Share of youth unemployed to youth population, both sexes'"
-,,"'Share of youth unemployed to youth population, men'"
-,,"'Share of youth unemployed to youth population, women'"
-,,"'Slum population as percentage of urban, percentage'"
-,,'Slum population in urban areas (thousands)'
-,,"'Terrestrial and marine areas protected to total territorial area, percentage'"
-,,"'Terrestrial and marine areas protected, sq. km.'"
-,,"'Terrestrial areas protected to total surface area, percentage'"
-,,"'Terrestrial areas protected, sq. km.'"
-,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Total net enrolment ratio in primary education, both sexes'"
-,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Total net enrolment ratio in primary education, boys'"
-,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Total net enrolment ratio in primary education, girls'"
-,,'Total number of countries that have reached their HIPC decision points and number that have reached their HIPC completion points (cumulative)'
-,,'Total number of seats in national parliament'
+,"In cooperation with the private sector, make available the benefits of new technologies, especially information and communications ",'Personal computers'
+,"In cooperation with the private sector, make available the benefits of new technologies, especially information and communications ",'Personal computers per 100 inhabitants'
+,"In cooperation with pharmaceutical companies, provide access to affordable essential drugs in developing countries ","'Population with access to essential drugs, percentage'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'Condom use at last high-risk sex, 15-24 years old, men, percentage'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'Condom use at last high-risk sex, 15-24 years old, women, percentage'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,'Ratio of school attendance rate of orphans to school attendance rate of non orphans'
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'Women 15-24 years old with comprehensive correct knowledge of HIV/AIDS, percentage'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'HIV incidence rate, 15-49 years old, percentage (lower bound)'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'HIV incidence rate, 15-49 years old, percentage (mid-point)'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'HIV incidence rate, 15-49 years old, percentage (upper bound)'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'HIV prevalence rate, men 15-49 years old, in national based surveys'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'HIV prevalence rate, women 15-49 years old, in national based surveys'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'Men 15-24 years old with comprehensive correct knowledge of HIV/AIDS, percentage'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'People living with HIV, 15-49 years old, percentage'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'People living with HIV, 15-49 years old, percentage (lower bound)'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,"'People living with HIV, 15-49 years old, percentage (upper bound)'"
+,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Children under 5 sleeping under insecticide-treated bed nets, percentage'"
+,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Children under 5 with fever being treated with anti-malarial drugs, percentage'"
+,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Malaria death rate per 100,000 population, ages 0-4'"
+,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Malaria death rate per 100,000 population, all ages'"
 ,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Tuberculosis death rate per year per 100,000 population (lower bound)'"
 ,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Tuberculosis death rate per year per 100,000 population (mid-point)'"
 ,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Tuberculosis death rate per year per 100,000 population (upper bound)'"
@@ -165,11 +54,122 @@ Goal,Target,Indicator
 ,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Tuberculosis prevalence rate per 100,000 population (mid-point)'"
 ,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Tuberculosis prevalence rate per 100,000 population (upper bound)'"
 ,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Tuberculosis treatment success rate under DOTS, percentage'"
-,,"'Unmet need for family planning, limiting, percentage'"
-,,"'Unmet need for family planning, spacing, percentage'"
-,,"'Unmet need for family planning, total, percentage'"
-,,"'Women 15-24 years old with comprehensive correct knowledge of HIV/AIDS, percentage'"
+,"Halve, between 1990 and 2015, the proportion of people whose income is less than one dollar a day ","'Poorest quintile's share in national income or consumption, percentage'"
+,"Halve, between 1990 and 2015, the proportion of people whose income is less than one dollar a day ","'Population below $1.25 (PPP) per day, percentage'"
+,"Halve, between 1990 and 2015, the proportion of people whose income is less than one dollar a day ","'Poverty gap ratio at $1.25 a day (PPP), percentage'"
+,"Halve, between 1990 and 2015, the proportion of people whose income is less than one dollar a day ","'Population below national poverty line, rural, percentage'"
+,"Halve, between 1990 and 2015, the proportion of people whose income is less than one dollar a day ","'Population below national poverty line, total, percentage'"
+,"Halve, between 1990 and 2015, the proportion of people whose income is less than one dollar a day ","'Population below national poverty line, urban, percentage'"
+,"Halve, between 1990 and 2015, the proportion of people who suffer from hunger ","'Children under 5 moderately or severely underweight, percentage'"
+,"Halve, between 1990 and 2015, the proportion of people who suffer from hunger ","'Children under 5 severely underweight, percentage'"
+,"Halve, between 1990 and 2015, the proportion of people who suffer from hunger ","'Population undernourished, millions'"
+,"Halve, between 1990 and 2015, the proportion of people who suffer from hunger ","'Population undernourished, percentage'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Literacy rates of 15-24 years old, both sexes, percentage'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Literacy rates of 15-24 years old, men, percentage'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Literacy rates of 15-24 years old, women, percentage'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Percentage of pupils starting grade 1 who reach last grade of primary, both sexes'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Percentage of pupils starting grade 1 who reach last grade of primary, boys'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Percentage of pupils starting grade 1 who reach last grade of primary, girls'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Total net enrolment ratio in primary education, both sexes'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Total net enrolment ratio in primary education, boys'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Total net enrolment ratio in primary education, girls'"
 ,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling ","'Women to men parity index, as ratio of literacy rates, 15-24 years old'"
-,,"'Youth unemployment rate, aged 15-24, both sexes'"
-,,"'Youth unemployment rate, aged 15-24, men'"
-,,"'Youth unemployment rate, aged 15-24, women'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling","'Primary completion rate, both sexes'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling","'Primary completion rate, boys'"
+,"Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling","'Primary completion rate, girls'"
+,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2017",'Gender Parity Index in tertiary level enrolment'
+,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2017","'Seats held by women in national parliament, percentage'"
+,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2016",'Gender Parity Index in secondary level enrolment'
+,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2016",'Seats held by women in national parliament'
+,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015 ",'Gender Parity Index in primary level enrolment'
+,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015 ",'Seats held by men in national parliament'
+,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015 ",'Share of women in wage employment in the non-agricultural sector'
+,Deal comprehensively with the debt problems of developing countries through national and international measures in order to make debt sustainable in the long term ,"'Debt relief committed under HIPC initiative, cumulative million US$ in end-2009 NPV terms'"
+,Deal comprehensively with the debt problems of developing countries through national and international measures in order to make debt sustainable in the long term ,"'Debt relief delivered in full under MDRI initiative, cumulative million US$ in end-2009 NPV terms'"
+,Deal comprehensively with the debt problems of developing countries through national and international measures in order to make debt sustainable in the long term ,'Debt service as percentage of exports of goods and services and net income'
+,Deal comprehensively with the debt problems of developing countries through national and international measures in order to make debt sustainable in the long term ,'Total number of countries that have reached their HIPC decision points and number that have reached their HIPC completion points (cumulative)'
+,Address the special needs of the least developed countries ,'Net ODA as percentage of OECD/DAC donors GNI'
+,Address the special needs of the least developed countries ,'Net ODA to LDCs as percentage of OECD/DAC donors GNI'
+,Address the special needs of the least developed countries ,"'Net ODA to LDCs, million US$'"
+,Address the special needs of the least developed countries ,"'Net ODA, million US$'"
+,Address the special needs of the least developed countries ,"'ODA that is untied, million US$'"
+,Address the special needs of the least developed countries ,"'ODA that is untied, percentage'"
+,Address the special needs of the least developed countries ,'ODA to basic social services as percentage of sector-allocable ODA'
+,Address the special needs of the least developed countries ,"'ODA to basic social services, million US$'"
+,Address the special needs of landlocked developing countries and small island developing States ,'Agriculture support estimate for OECD countries as percentage of their GDP'
+,Address the special needs of landlocked developing countries and small island developing States ,"'Agriculture support estimate for OECD countries, million US$'"
+,Address the special needs of landlocked developing countries and small island developing States ,'Average tariffs imposed by developed countries on agricultural products from developing countries'
+,Address the special needs of landlocked developing countries and small island developing States ,'Average tariffs imposed by developed countries on clothings from developing countries'
+,Address the special needs of landlocked developing countries and small island developing States ,'Average tariffs imposed by developed countries on textiles from developing countries'
+,Address the special needs of landlocked developing countries and small island developing States ,"'ODA provided to help build trade capacity, percentage'"
+,Address the special needs of landlocked developing countries and small island developing States ,'ODA received in landlocked developing countries as percentage of their GNI'
+,Address the special needs of landlocked developing countries and small island developing States ,"'ODA received in landlocked developing countries, million US$'"
+,Address the special needs of landlocked developing countries and small island developing States ,'ODA received in small islands developing States as percentage of their GNI'
+,Address the special needs of landlocked developing countries and small island developing States ,"'ODA received in small islands developing States, million US$'"
+,"Achieve, by 2015, universal access to reproductive health ","'Adolescent birth rate, per 1,000 women'"
+,"Achieve, by 2015, universal access to reproductive health ","'Antenatal care coverage, at least four visits, percentage'"
+,"Achieve, by 2015, universal access to reproductive health ","'Antenatal care coverage, at least one visit, percentage'"
+,"Achieve, by 2015, universal access to reproductive health ","'Condom use to overall contraceptive use among currently married women 15-49 years old, percentage'"
+,"Achieve, by 2015, universal access to reproductive health ","'Current contraceptive use among married women 15-49 years old, any method, percentage'"
+,"Achieve, by 2015, universal access to reproductive health ","'Current contraceptive use among married women 15-49 years old, condom, percentage'"
+,"Achieve, by 2015, universal access to reproductive health ","'Current contraceptive use among married women 15-49 years old, modern methods, percentage'"
+,"Achieve, by 2015, universal access to reproductive health ","'Unmet need for family planning, limiting, percentage'"
+,"Achieve, by 2015, universal access to reproductive health ","'Unmet need for family planning, spacing, percentage'"
+,"Achieve, by 2015, universal access to reproductive health ","'Unmet need for family planning, total, percentage'"
+,"Achieve, by 2010, universal access to treatment for HIV/AIDS for all those who need it ","'Antiretroviral therapy coverage among people with advanced HIV infection, percentage'"
+,"Achieve, by 2010, universal access to treatment for HIV/AIDS for all those who need it ","'Antiretroviral therapy coverage among people with advanced HIV infection, percentage (lower bound)'"
+,"Achieve, by 2010, universal access to treatment for HIV/AIDS for all those who need it ","'Antiretroviral therapy coverage among people with advanced HIV infection, percentage (upper bound)'"
+,"Achieve, by 2010, universal access to treatment for HIV/AIDS for all those who need it ",'Percentage of HIV-infected pregnant women who received antiretroviral drugs to reduce the risk for mother-to-child transmission (lower bound)'
+,"Achieve, by 2010, universal access to treatment for HIV/AIDS for all those who need it ",'Percentage of HIV-infected pregnant women who received antiretroviral drugs to reduce the risk for mother-to-child transmission (Mid point)'
+,"Achieve, by 2010, universal access to treatment for HIV/AIDS for all those who need it ",'Percentage of HIV-infected pregnant women who received antiretroviral drugs to reduce the risk for mother-to-child transmission (upper bound)'
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Employment-to-population ratio, both sexes, percentage'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Employment-to-population ratio, men, percentage'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Employment-to-population ratio, women, percentage'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Growth rate of GDP per person employed, percentage'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Proportion of employed people living below $1 (PPP) per day, percentage'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Proportion of own-account and contributing family workers in total employment, both sexes, percentage'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Proportion of own-account and contributing family workers in total employment, men, percentage'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Proportion of own-account and contributing family workers in total employment, women, percentage'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Ratio of youth unemployment rate to adult unemployment rate, both sexes'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Ratio of youth unemployment rate to adult unemployment rate, men'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Ratio of youth unemployment rate to adult unemployment rate, women'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Share of youth unemployed to total unemployed, both sexes'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Share of youth unemployed to total unemployed, men'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Share of youth unemployed to total unemployed, women'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Share of youth unemployed to youth population, both sexes'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Share of youth unemployed to youth population, men'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Share of youth unemployed to youth population, women'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,'AIDS deaths'
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,'AIDS deaths (lower bound)'
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,'AIDS deaths (upper bound)'
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,'AIDS orphans (one or both parents)'
+,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,'Consumption of ozone-depleting CFCs in ODP metric tons'
+,Address the special needs of landlocked developing countries and small island developing States ,"'Developed country imports from developing countries, admitted duty free, percentage'"
+,Address the special needs of landlocked developing countries and small island developing States ,"'Developed country imports from the LDCs, admitted duty free, percentage'"
+,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,"'Energy use (kg oil equivalent) per $1,000 GDP (Constant 2005 PPP $)'"
+,"Reduce biodiversity loss, achieving, by 2010, a significant reduction in the rate of loss ",'Marine areas protected to sea areas under national jurisdiction (0-200 nautical miles)'
+,"Reduce biodiversity loss, achieving, by 2010, a significant reduction in the rate of loss ","'Marine areas protected to territorial waters, percentage'"
+,"Reduce biodiversity loss, achieving, by 2010, a significant reduction in the rate of loss ","'Marine areas protected, sq. km.'"
+,Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases ,"'Notified cases of malaria per 100,000 population'"
+,Integrate the principles of sustainable development into country policies and programmes and reverse the loss of environmental resources ,"'Population using solid fuels, percentage'"
+,"Reduce biodiversity loss, achieving, by 2010, a significant reduction in the rate of loss ",'Proportion of species threatened with extinction'
+,"Halve, by 2015, the proportion of people without sustainable access to safe drinking water and basic sanitation ","'Proportion of the population using improved drinking water sources, rural'"
+,"Halve, by 2015, the proportion of people without sustainable access to safe drinking water and basic sanitation ","'Proportion of the population using improved drinking water sources, total'"
+,"Halve, by 2015, the proportion of people without sustainable access to safe drinking water and basic sanitation ","'Proportion of the population using improved drinking water sources, urban'"
+,"Halve, by 2015, the proportion of people without sustainable access to safe drinking water and basic sanitation ","'Proportion of the population using improved sanitation facilities, rural'"
+,"Halve, by 2015, the proportion of people without sustainable access to safe drinking water and basic sanitation ","'Proportion of the population using improved sanitation facilities, total'"
+,"Halve, by 2015, the proportion of people without sustainable access to safe drinking water and basic sanitation ","'Proportion of the population using improved sanitation facilities, urban'"
+,"Reduce biodiversity loss, achieving, by 2010, a significant reduction in the rate of loss ","'Proportion of total water resources used, percentage'"
+,"Develop further an open, rule-based, predictable, non- discriminatory trading and financial system ","'Purchasing power parities (PPP) conversion factor, local currency unit to international dollar'"
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,'School attendance rate of children aged 10-14 both of whose parents are alive and who live with at least one parent'
+,Have halted by 2015 and begun to reverse the spread of HIV/AIDS ,'School attendance rate of orphans aged 10-14'
+,"By 2020, to have achieved a significant improvement in the lives of at least 100 million slum dwellers ","'Slum population as percentage of urban, percentage'"
+,"By 2020, to have achieved a significant improvement in the lives of at least 100 million slum dwellers ",'Slum population in urban areas (thousands)'
+,"Reduce biodiversity loss, achieving, by 2010, a significant reduction in the rate of loss ","'Terrestrial and marine areas protected to total territorial area, percentage'"
+,"Reduce biodiversity loss, achieving, by 2010, a significant reduction in the rate of loss ","'Terrestrial and marine areas protected, sq. km.'"
+,"Reduce biodiversity loss, achieving, by 2010, a significant reduction in the rate of loss ","'Terrestrial areas protected to total surface area, percentage'"
+,"Reduce biodiversity loss, achieving, by 2010, a significant reduction in the rate of loss ","'Terrestrial areas protected, sq. km.'"
+,"Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015 ",'Total number of seats in national parliament'
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Youth unemployment rate, aged 15-24, both sexes'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Youth unemployment rate, aged 15-24, men'"
+,"Achieve full and productive employment and decent work for all, including women and young people ","'Youth unemployment rate, aged 15-24, women'"
