@@ -23,7 +23,7 @@ This Django project is built to view the data gathered for the United Nations Mi
 [The data can be found here](http://mdgs.un.org/unsd/mdg/Data.aspx)
 
 ## Data model
-![Data Model](/static/img/datamodel.png) 
+![Data Model](/static/img/datamodel_final.png) 
 
 ## Package Dependencies
 
