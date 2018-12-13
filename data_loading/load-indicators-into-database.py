@@ -14,7 +14,7 @@ cursor.execute(sql_Delete_query)
 
 
 statement = '''
-    CREATE TABLE test (Id INT PRIMARY KEY AUTO_INCREMENT, CountryCode VARCHAR(255), Country VARCHAR(255),SeriesCode VARCHAR(255),Indicator VARCHAR(255),Indicator_Value VARCHAR(255), Year YEAR(4))
+    CREATE TABLE country_target_indicator (country_target_indicator INT PRIMARY KEY AUTO_INCREMENT, CountryCode VARCHAR(255), Country VARCHAR(255), SeriesCode VARCHAR(255),Indicator VARCHAR(255),Indicator_Value VARCHAR(255), Year YEAR(4))
 '''
 cursor.execute(statement)
 
@@ -42,13 +42,19 @@ for year in years:
         i+=1
 
         statement = '''
-            INSERT INTO test(CountryCode,Country,SeriesCode,Indicator,Indicator_Value,Year)
+            INSERT IGNORE INTO country_target_indicator(CountryCode,Country,SeriesCode,Indicator,Indicator_Value,Year)
             VALUES(%s, "%s", %s, "%s",%s,%s) 
         '''
         cursor.executemany(statement,data)
         mydb.commit()
-        
-#close the connection to the database.
+    print('Finished Year: ',year) 
 mydb.commit()
+
+#Get rid of empty rows
+statement = '''
+DELETE from country_target_indicator WHERE !country_target_indicator.Indicator_Value
+'''
+
+cursor.execute(statement)
 cursor.close()
 print("Done")
