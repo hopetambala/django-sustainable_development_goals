@@ -26,4 +26,19 @@ This Django project is built to view the data gathered for the United Nations Mi
 ![Data Model](/static/img/datamodel_final.png) 
 
 ## Package Dependencies
+[MySQLDB](http://mysql-python.sourceforge.net/MySQLdb.html)
+
+
+# Installation
+Install virtualenv and create a Virtual Environmental
+```
+pip install virtualenv venv
+...
+source venv/bin/activate
+```
+
+Install project requirements
+```
+pip install -r requirements.txt
+```
 
