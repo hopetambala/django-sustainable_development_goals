@@ -84,6 +84,8 @@ ORDER BY gt.Target;
 
 /*
   Creates Final Country target Indicators Table
+
+  This below code is so slow, it might not work
 */
 
 DROP TABLE IF EXISTS country_target_indicator;
