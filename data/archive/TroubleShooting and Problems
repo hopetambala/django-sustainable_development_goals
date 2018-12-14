@@ -1,0 +1,52 @@
+Trouble Shooting
+
+#Select Alot of Values
+SELECT c.country_area_name, i.indicator_id, cti.CountryCode, cti.SeriesCode, cti.year, cti.Indicator_Value
+FROM country_target_indicator cti
+LEFT JOIN indicator i
+	ON (i.indicator_id)
+		LEFT JOIN indicator_value_type ivt
+			ON cti.Indicator_value = ivt.indicator_value_name
+LEFT JOIN country_area c
+	  ON cti.country_area_id = c.country_area_id
+
+Change column name
+ALTER TABLE country_target_indicator CHANGE SeriesCode seriescode VARCHAR(255);
+
+#Select Alot of Values
+SELECT c.country_area_name, i.indicator_id, cti.CountryCode, cti.SeriesCode, cti.year, cti.Indicator_Value
+FROM country_target_indicator cti
+LEFT JOIN indicator i
+	ON (i.indicator_id)
+		LEFT JOIN indicator_value_type ivt
+			ON cti.Indicator_value = ivt.indicator_value_name
+LEFT JOIN country_area c
+	  ON cti.country_area_id = c.country_area_id
+
+
+
+/* insert temporary values into real table
+DROP TABLE country_target_indicator;
+CREATE TABLE country_target_indicator LIKE temp_country_target_indicator; 
+INSERT country_target_indicator SELECT * FROM temp_country_target_indicator; 
+*/
+
+/* Change values to foreign key values
+UPDATE country_target_indicator SET country_target_indicator.Indicator=
+   (SELECT indicator_value_type_id FROM indicator_value_type where country_target_indicator.Indicator=indicator_value_type.indicator_value_name)
+   
+
+UPDATE country_target_indicator SET country_target_indicator.Country=
+(SELECT country_area_id FROM country_area where country_target_indicator.Country=country_area.country_area_name)
+*/
+
+/* Add the foreign key constraint to columns
+ALTER TABLE country_target_indicator
+MODIFY COLUMN Country INT;
+ALTER TABLE country_target_indicator ADD CONSTRAINT fk_Country FOREIGN KEY (Country) REFERENCES country_area(country_area_id);
+
+ALTER TABLE country_target_indicator
+MODIFY COLUMN Indicator INT;
+ALTER TABLE country_target_indicator ADD CONSTRAINT fk_Indicator FOREIGN KEY (Indicator) REFERENCES indicator(indicator_id);
+*/
+

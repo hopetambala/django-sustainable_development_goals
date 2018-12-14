@@ -46,15 +46,12 @@ for year in years:
             VALUES(%s, %s, %s, %s,%s,%s) 
         '''
         cursor.executemany(statement,data)
-        mydb.commit()
     print('Finished Year: ',year) 
-mydb.commit()
+
 
 #Get rid of empty rows
-statement = '''
-DELETE from temp_country_target_indicator WHERE !temp_country_target_indicator.Indicator_Value
-'''
-
+statement = ''' DELETE from temp_country_target_indicator WHERE !temp_country_target_indicator.Indicator_Value'''
 cursor.execute(statement)
+mydb.commit()
 cursor.close()
 print("Done")

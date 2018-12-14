@@ -54,7 +54,8 @@ ORDER BY gt.Target;
 */
 /* ############################*/
 
-
+DELETE FROM temp_country_target_indicator
+WHERE !Indicator_Value;
 
 
 /*
@@ -110,14 +111,14 @@ DROP TABLE IF EXISTS country_target_indicator;
 CREATE TABLE IF NOT EXISTS country_target_indicator (   
 	country_target_indicator_id INTEGER NOT NULL AUTO_INCREMENT UNIQUE,   
 	country_area_id INT (255) NOT NULL,  
-    indicator_id INTEGER NOT NULL,
-    countrycode VARCHAR(255),
-    seriescode VARCHAR(255),
-    year YEAR(4),
-    indicator_value DECIMAL (11,2),
-    PRIMARY KEY (country_target_indicator_id),   
-    FOREIGN KEY (country_area_id) REFERENCES country_area(country_area_id)     
-		ON DELETE CASCADE ON UPDATE CASCADE,
+  indicator_id INTEGER NOT NULL,
+  countrycode VARCHAR(255),
+  seriescode VARCHAR(255),
+  year YEAR(4),
+  indicator_value DECIMAL (11,2),
+  PRIMARY KEY (country_target_indicator_id),   
+  FOREIGN KEY (country_area_id) REFERENCES country_area(country_area_id)     
+    ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (indicator_id) REFERENCES indicator(indicator_id)     
 		ON DELETE CASCADE ON UPDATE CASCADE );
 
