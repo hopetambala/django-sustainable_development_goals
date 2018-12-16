@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'unesco_heritage_sites',
+        'NAME': 'unsdg',
         'USER': 'root',
         'PASSWORD': DATABASES_PASSWORD,
         'OPTIONS': {
