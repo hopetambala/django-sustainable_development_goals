@@ -36,6 +36,12 @@ class CountryTargetIndicator(models.Model):
     class Meta:
         managed = False
         db_table = 'country_target_indicator'
+        ordering = ['indicator_value']
+        verbose_name = 'UNMDG Country Indicator'
+        verbose_name_plural = 'UNMDG Country Target Indicators'
+
+    def __str__(self):
+        return self.indicator_value
 
 
 class DevStatus(models.Model):
@@ -45,6 +51,12 @@ class DevStatus(models.Model):
     class Meta:
         managed = False
         db_table = 'dev_status'
+        ordering = ['dev_status_name']
+        verbose_name = 'UNSD M49 Country or Area Development Status'
+        verbose_name_plural = 'UNSD M49 Country or Area Development Statuses'
+
+    def __str__(self):
+        return self.dev_status_name
 
 
 class Goal(models.Model):
@@ -54,6 +66,12 @@ class Goal(models.Model):
     class Meta:
         managed = False
         db_table = 'goal'
+        ordering = ['goal_name']
+        verbose_name = 'UNMDG Goal'
+        verbose_name_plural = 'UNMDG Goals'
+
+    def __str__(self):
+        return self.goal_name
 
 
 class Indicator(models.Model):
@@ -64,7 +82,7 @@ class Indicator(models.Model):
     class Meta:
         managed = False
         db_table = 'indicator'
-
+        
 
 class IndicatorValueType(models.Model):
     indicator_value_type_id = models.AutoField(primary_key=True)
@@ -73,6 +91,12 @@ class IndicatorValueType(models.Model):
     class Meta:
         managed = False
         db_table = 'indicator_value_type'
+        ordering = ['indicator_value_name']
+        verbose_name = 'UNMDG Indicator Value Name'
+        verbose_name_plural = 'UNMDG Indicator Value Names'
+
+    def __str__(self):
+        return self.indicator_value_name
 
 
 class IntermediateRegion(models.Model):
@@ -83,6 +107,12 @@ class IntermediateRegion(models.Model):
     class Meta:
         managed = False
         db_table = 'intermediate_region'
+        ordering = ['intermediate_region_name']
+        verbose_name = 'UNSD M49 Intermediate Region'
+        verbose_name_plural = 'UNSD M49 Intermediate Regions'
+
+    def __str__(self):
+        return self.intermediate_region_name
 
 
 class Location(models.Model):
@@ -105,6 +135,12 @@ class Planet(models.Model):
     class Meta:
         managed = False
         db_table = 'planet'
+        ordering = ['planet_name']
+        verbose_name = 'UNSD Planet Name'
+        verbose_name_plural = 'UNSD Planet Names'
+
+    def __str__(self):
+        return self.planet_name
 
 
 class Region(models.Model):
@@ -115,6 +151,12 @@ class Region(models.Model):
     class Meta:
         managed = False
         db_table = 'region'
+        ordering = ['region_name']
+        verbose_name = 'UNSD M49 Region'
+        verbose_name_plural = 'UNSD M49 Regions'
+
+    def __str__(self):
+        return self.region_name
 
 
 class SubRegion(models.Model):
@@ -125,6 +167,12 @@ class SubRegion(models.Model):
     class Meta:
         managed = False
         db_table = 'sub_region'
+        ordering = ['sub_region_name']
+        verbose_name = 'UNSD M49 Subregion'
+        verbose_name_plural = 'UNSD M49 Subregions'
+
+    def __str__(self):
+        return self.sub_region_name
 
 
 class Target(models.Model):
@@ -135,3 +183,9 @@ class Target(models.Model):
     class Meta:
         managed = False
         db_table = 'target'
+        ordering = ['target_name']
+        verbose_name = 'UNMDG Target'
+        verbose_name_plural = 'UNMDG Targets'
+
+    def __str__(self):
+        return self.target_name
