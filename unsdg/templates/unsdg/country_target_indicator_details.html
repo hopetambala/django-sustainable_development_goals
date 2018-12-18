@@ -1,0 +1,93 @@
+{% extends 'unsdg/base.html' %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+  
+  {% for item in cti_list %}
+  <h2>{{item.country_area.country_area_name| safe}}</h2>
+
+
+  {% if item.indicator.target.goal.goal_name %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Goal</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.indicator.target.goal.goal_name | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.indicator.target.target_name %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Target</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.indicator.target.target_name | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.indicator.indicator_value_type.indicator_value_name %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Indicator</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.indicator.indicator_value_type.indicator_value_name | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.indicator_value %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Indicator Value</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.indicator_value | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.location.sub_region.sub_region_name %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Sub-region Name</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.location.sub_region.sub_region_name | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.location.intermediate_region.intermediate_region_name %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Intermediate Region Name</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.location.intermediate_region.intermediate_region_name | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.dev_status %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Development Status</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.dev_status | safe}}
+      </div>
+    </div>
+  {% endif %}
+  {% endfor %}
+{% else %}
+  <a href="{% url 'login' %}">Log in</a>
+{% endif %}
+
+
+
+{% endblock content %}

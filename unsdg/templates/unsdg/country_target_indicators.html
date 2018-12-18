@@ -8,27 +8,28 @@
         <h2>UN Country Goals, Targets, Indicators Combined</h2>
       </header>
 
-
-      {% if country_target_indicators_list %}
-      <ul>
-        {% for point in country_target_indicators_list %}
-        <!-- safe filter on for raw HTML stored in database -->
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-              {{ point.0 | safe }}
+    
+        <div class="row">
+        {% if country_target_indicators_list %}
+          {% for point in country_target_indicators_list %}
+          <!-- safe filter on for raw HTML stored in database -->
+          
+          <div class="card" style="width: 18rem; margin:1%">
+            <div class="card-header" >
+                <a href="{% url 'country_target_indicator_detail' point.5 %}"> {{ point.0 | safe }} </a>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{ point.1 | safe }}</li>
+              <li class="list-group-item">{{ point.2 | safe }}</li>
+              <li class="list-group-item">{{ point.3 | safe }}: {{ point.4 | safe }}</li>
+            </ul>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{ point.1 | safe }}</li>
-            <li class="list-group-item">{{ point.2 | safe }}</li>
-            <li class="list-group-item">{{ point.3 | safe }}: {{ point.4 | safe }}</li>
-          </ul>
+          {% endfor %}
+        {% else %}
+        <p>No Country Indicators are available to view.</p>
+        {% endif %}
         </div>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p>No Country Indicators are available to view.</p>
-      {% endif %}
-
+      
 
       <p>page count: {{ country_target_indicators_list.count }}</p>
     </article>
