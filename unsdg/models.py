@@ -23,6 +23,9 @@ class CountryArea(models.Model):
         verbose_name = 'UNSD M49 Country or Area'
         verbose_name_plural = 'UNSD M49 Countries or Areas'
 
+    def __str__(self):
+        return self.country_area_name
+
 
 class CountryTargetIndicator(models.Model):
     country_target_indicator_id = models.IntegerField(primary_key=True)
