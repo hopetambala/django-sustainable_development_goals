@@ -98,6 +98,12 @@ class CTIndicatorCreateView(generic.View):
 			
 			for country in form.cleaned_data['country_area']:
 				CountryTargetIndicator.objects.create(country_target_indicator=ctindicator, country_area=country)
+
+			'''
+			for goal in form.cleaned_data['goal']:
+				Goal.objects.create(country_target_indicator=ctindicator, goal=goal)
+			'''
+
 			
 			return redirect(ctindicator) # shortcut to object's get_absolute_url()
 			# return HttpResponseRedirect(site.get_absolute_url())
