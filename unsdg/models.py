@@ -6,6 +6,8 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
+from django.urls import reverse
+
 
 
 class CountryArea(models.Model):
@@ -45,6 +47,10 @@ class CountryTargetIndicator(models.Model):
 
     def __str__(self):
         return self.indicator_value
+    
+    def get_absolute_url(self):
+        #return reverse('country_target_indicator_detail', args=[str(self.id)])
+        return reverse('country_target_indicator_detail', kwargs={'pk': self.pk})
 
 
 class DevStatus(models.Model):
