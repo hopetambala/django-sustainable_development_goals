@@ -50,9 +50,20 @@ class CountryTargetIndicatorListView(generic.ListView):
 		return super().dispatch(*args, **kwargs)
 
 	def get_queryset(self):
-		return CountryTargetIndicator.objects.select_related('indicator').values_list('country_area__country_area_name','indicator__target__goal__goal_name','indicator__target__target_name','indicator__indicator_value_type__indicator_value_name','indicator_value')
+		#return CountryTargetIndicator.objects.select_related('indicator').values_list('country_area__country_area_name','indicator__target__goal__goal_name','indicator__target__target_name','indicator__indicator_value_type__indicator_value_name','indicator_value')
+		return CountryTargetIndicator.objects.select_related('indicator').values_list('country_area__country_area_name','indicator__target__goal__goal_name','indicator__target__target_name','indicator__indicator_value_type__indicator_value_name','indicator_value','country_target_indicator_id')
 
+class CountryTargetIndicatorDetailView(generic.DetailView):
+	model = CountryTargetIndicator
+	context_object_name = 'country_target_indicator_detail'
+	template_name = 'unsdg/country_target_indicator_details.html'
 
+	def get_context_data(self, **kwargs):
+		context = super(CountryTargetIndicatorDetailView, self).get_context_data(**kwargs)
+		context['cti_list'] = CountryTargetIndicator.objects.all().select_related('indicator').filter(country_target_indicator_id=self.kwargs['pk'])
+		print(context)
+		# And so on for more models
+		return context
 
 class IndicatorNameListView(generic.ListView):
 	model = IndicatorValueType
