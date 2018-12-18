@@ -36,7 +36,8 @@ class CountryTargetIndicator(models.Model):
     seriescode = models.CharField(max_length=255, blank=True, null=True)
     indicator = models.ForeignKey('Indicator', models.DO_NOTHING, blank=True, null=True)
     indicator_value = models.CharField(db_column='Indicator_Value', max_length=255, blank=True, null=True)  # Field name made lowercase.
-    year = models.TextField(blank=True, null=True)  # This field type is a guess.
+    #year = models.TextField(blank=True, null=True)  # This field type is a guess.
+    year = models.IntegerField(blank=True, null=True)
 
     class Meta:
         managed = False

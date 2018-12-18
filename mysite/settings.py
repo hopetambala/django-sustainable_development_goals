@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'unsdg.apps.UnsdgConfig',
+    'crispy_forms',
     'social_django',
     'test_without_migrations',
 ]
@@ -157,3 +158,6 @@ LOGIN_URL = '/auth/login/google-oauth2/'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+#django-crispy-forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

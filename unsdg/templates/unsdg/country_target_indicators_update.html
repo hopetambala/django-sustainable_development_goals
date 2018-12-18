@@ -1,0 +1,35 @@
+{% extends 'unsdg/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <header>
+        <h2>Country Target Indicator Update</h2>
+    </header>
+
+    <!-- novalidate attribute required to render validation messages -->
+    <form method="post" novalidate>
+    {% csrf_token %}
+
+
+        <div class="row">
+            <div class="col-6">
+                {{ form.country_target_indicator_name|as_crispy_field }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-6">
+            {{ form.country_area|as_crispy_field }}
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success">Update</button>
+        &nbsp;<a class="btn btn-outline-secondary" href="{% url 'sites' %}">cancel</a>
+
+
+    </form>
+
+{% endblock content %}
