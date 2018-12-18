@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'unsdg.apps.UnsdgConfig'
+    'unsdg.apps.UnsdgConfig',
+    'test_without_migrations',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,7 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
+# Add a custom test runner for converting unmanaged models to managed before
+# running a test and then revert the effect afterwards.
+
+TEST_RUNNER = 'unsdg.utils.UnManagedModelTestRunner'
