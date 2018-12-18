@@ -23,13 +23,21 @@ class HomePageView(generic.TemplateView):
 
 class GoalListView(generic.ListView):
     model = Goal
-    context_object_name = 'goals'
-    template_name = 'unsdg/goal.html'
+    context_object_name = 'goal_list'
+    template_name = 'unsdg/goals.html'
     paginate_by = 50
 
     def get_queryset(self):
-        #return HeritageSite.objects.all().select_related('heritage_site_category').order_by('site_name')
         return Goal.objects.all()
+
+class TargetListView(generic.ListView):
+    model = Target
+    context_object_name = 'target_list'
+    template_name = 'unsdg/targets.html'
+    paginate_by = 20
+
+    def get_queryset(self):
+        return Target.objects.all()
 
 class CountryListView(generic.ListView):
 	model = CountryArea	
@@ -43,11 +51,12 @@ class CountryListView(generic.ListView):
 	def get_queryset(self):
 		return CountryArea.objects.all().select_related('dev_status').order_by('country_area_name')
 
-class IndicatorListView(generic.ListView):
+
+class IndicatorNameListView(generic.ListView):
 	model = IndicatorValueType
-	context_object_name = 'indicator_names'
+	context_object_name = 'indicator_name_list'
 	template_name = 'unsdg/indicator_names.html'
-	paginate_by = 50
+	paginate_by = 20
 
 	def get_queryset(self):
-		return IndicatorValueType.objects.all() 
+		return IndicatorValueType.objects.all()
