@@ -39,17 +39,19 @@ class TargetListView(generic.ListView):
     def get_queryset(self):
         return Target.objects.all()
 
-class CountryListView(generic.ListView):
-	model = CountryArea	
-	context_object_name = 'countries'
-	template_name = 'heritagesites/country_area.html'
-	paginate_by = 20
+@method_decorator(login_required, name='dispatch')
+class CountryTargetIndicatorListView(generic.ListView):
+	model = CountryTargetIndicator	
+	context_object_name = 'country_target_indicators_list'
+	template_name = 'unsdg/country_target_indicators.html'
+	paginate_by = 200
 
 	def dispatch(self, *args, **kwargs):
 		return super().dispatch(*args, **kwargs)
 
 	def get_queryset(self):
-		return CountryArea.objects.all().select_related('dev_status').order_by('country_area_name')
+		return CountryTargetIndicator.objects.select_related('indicator').values_list('country_area__country_area_name','indicator__target__goal__goal_name','indicator__target__target_name','indicator__indicator_value_type__indicator_value_name','indicator_value')
+
 
 
 class IndicatorNameListView(generic.ListView):
