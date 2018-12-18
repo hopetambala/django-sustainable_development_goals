@@ -7,31 +7,31 @@
         <header>
           <div class="row">
             <div class="col-sm-11">
-              <h2>Name of Development Indicators</h2>
+              <h2>Millenium Goals</h2>
             </div>
           </div>
         </header>
       
-        <p> Series of measurable health indicators and economic indicators for each target.</p>
+        <p> A series of goals</p>
       
         
       
-        {% if indicator_name_list %}
+        {% if goal_list %}
         <ul>
       
-          {% for indicator in indicator_name_list %} 
+          {% for goal in goal_list %} 
       
-          <li>{{indicator.indicator_value_name }} </li>
+          <li>{{goal.goal_name }} </li>
 
           {% endfor %}
       
       
         </ul>
         {% else %}
-        <p>No Indicators are available to view.</p>
+        <p>No Goals are available to view.</p>
         {% endif %}
       
-        <p>page count: {{ indicator_name_list.count }}</p>
+        <p>page count: {{ goal_list.count }}</p>
       </article>
 
 {% endblock content %}
