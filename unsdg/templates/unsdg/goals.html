@@ -3,35 +3,35 @@
 {% block content %}
 
 <article>
-        {% include 'unsdg/pagination.html' %} 
-        <header>
-          <div class="row">
-            <div class="col-sm-11">
-              <h2>Millenium Goals</h2>
-            </div>
-          </div>
-        </header>
-      
-        <p> A series of goals</p>
-      
-        
-      
-        {% if goal_list %}
-        <ul>
-      
-          {% for goal in goal_list %} 
-      
-          <li>{{goal.goal_name }} </li>
+  {% include 'unsdg/pagination.html' %} 
+  <header>
+    <div class="row">
+      <div class="col-sm-11">
+        <h2>Millenium Goals</h2>
+      </div>
+    </div>
+  </header>
 
-          {% endfor %}
-      
-      
-        </ul>
-        {% else %}
-        <p>No Goals are available to view.</p>
-        {% endif %}
-      
-        <p>page count: {{ goal_list.count }}</p>
-      </article>
+  <p> A series of goals</p>
+
+  
+
+  {% if goal_list %}
+  <ul>
+
+    {% for goal in goal_list %} 
+
+    <li>{{goal.goal_name }} </li>
+
+    {% endfor %}
+
+
+  </ul>
+  {% else %}
+  <p>No Goals are available to view.</p>
+  {% endif %}
+
+  <p>page count: {{ goal_list.count }}</p>
+</article>
 
 {% endblock content %}

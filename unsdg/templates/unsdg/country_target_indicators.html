@@ -1,0 +1,38 @@
+{% extends 'unsdg/base.html' %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <article>
+      {% include 'unsdg/pagination.html' %} 
+      <header>
+        <h2>UN Country Goals, Targets, Indicators Combined</h2>
+      </header>
+
+
+      {% if country_target_indicators_list %}
+      <ul>
+        {% for point in country_target_indicators_list %}
+        <!-- safe filter on for raw HTML stored in database -->
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+              {{ point.0 | safe }}
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ point.1 | safe }}</li>
+            <li class="list-group-item">{{ point.2 | safe }}</li>
+            <li class="list-group-item">{{ point.3 | safe }}: {{ point.4 | safe }}</li>
+          </ul>
+        </div>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No Country Indicators are available to view.</p>
+      {% endif %}
+
+
+      <p>page count: {{ country_target_indicators_list.count }}</p>
+    </article>
+  {% else %}
+    <a href="{% url 'login' %}">Log in</a>
+  {% endif %}
+{% endblock content %}}
