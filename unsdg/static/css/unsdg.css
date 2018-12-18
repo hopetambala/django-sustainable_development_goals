@@ -3,7 +3,7 @@
  */
 
  body {
-    background-color: #EAE7DC;
+    background-color: #C3DEC8;
 }
 
 /*
@@ -19,7 +19,7 @@ nav {
  */
 
 .navbar-custom {
-    background-color: #8EC274;
+    background-color: #6DAED4;
 }
 
 /* change the brand and text color */
@@ -78,7 +78,7 @@ main {
  */
 
 footer {
-    background-color: #543D33;
+    background-color: #7F8A5D;
     /*padding: 0.8rem 1rem;  Week 8*/
 }
 
@@ -95,7 +95,7 @@ footer a:active {
 
 footer a:hover {
     background-color: transparent;
-    color: #8EC274;
+    color: #6DAED4;
     /* color: #D8C3A5; */
 }
 
@@ -105,7 +105,7 @@ footer a:visited {
 }
 
 footer p {
-    background-color: #543D33;
+    /*background-color: #49755A;*/
     display: block;
     text-align: left;
     font-size: 0.875rem;
@@ -118,7 +118,7 @@ footer p {
  */
 
 h1, h2, h3, h4 {
-    color: #543D33;
+    color: #49755A;
     /* margin-top: 1em; */
     /*margin-bottom: 0.5rem; Week 8*/ 
     text-align: left;
