@@ -44,7 +44,7 @@ class CountryTargetIndicatorListView(generic.ListView):
 	model = CountryTargetIndicator	
 	context_object_name = 'country_target_indicators_list'
 	template_name = 'unsdg/country_target_indicators.html'
-	paginate_by = 200
+	paginate_by = 1000
 
 	def dispatch(self, *args, **kwargs):
 		return super().dispatch(*args, **kwargs)
