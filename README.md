@@ -42,3 +42,7 @@ Install project requirements
 pip install -r requirements.txt
 ```
 
+
+# API
+[Rest API](http://localhost:8000/unsdg/api/swagger-docs/)
+
