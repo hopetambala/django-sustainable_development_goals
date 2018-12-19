@@ -8,7 +8,7 @@ from django.urls import reverse_lazy
 
 from .models import CountryTargetIndicator, CountryArea, Goal, Target,IndicatorValueType
 from .forms import CountryTargetIndicatorForm
-#from .filters import HeritageSiteFilter
+from .filters import CountryTargetIndicatorFilter
 
 
 def index(request):
@@ -104,7 +104,7 @@ class CTIndicatorCreateView(generic.View):
 				Goal.objects.create(country_target_indicator=ctindicator, goal=goal)
 			'''
 
-			
+
 			return redirect(ctindicator) # shortcut to object's get_absolute_url()
 			# return HttpResponseRedirect(site.get_absolute_url())
 		return render(request, 'unsdg/country_target_indicators_new.html', {'form': form})
@@ -184,3 +184,15 @@ class CTIndicatorDeleteView(generic.DeleteView):
 		self.object.delete()
 
 		return HttpResponseRedirect(self.get_success_url())
+
+class CTIndicatorFilterView(FilterView):
+	filterset_class = CountryTargetIndicatorFilter
+	template_name = 'unsdg/country_target_indicators_filter.html'
+	paginate_by = 200
+
+	context_object_name = 'country_target_indicators_list'
+	def get_queryset(self):
+		#return CountryTargetIndicator.objects.select_related('indicator').values_list('country_area__country_area_name','indicator__target__goal__goal_name','indicator__target__target_name','indicator__indicator_value_type__indicator_value_name','indicator_value')
+		return CountryTargetIndicator.objects\
+				.select_related('indicator')\
+				.values_list('country_area__country_area_name','indicator__target__goal__goal_name','indicator__target__target_name','indicator__indicator_value_type__indicator_value_name','indicator_value','country_target_indicator_id')
