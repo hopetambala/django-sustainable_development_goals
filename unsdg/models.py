@@ -53,6 +53,145 @@ class CountryTargetIndicator(models.Model):
         #return reverse('country_target_indicator_detail', args=[str(self.id)])
         return reverse('country_target_indicator_detail', kwargs={'pk': self.pk})
 
+    @property
+    def country_area_names(self):
+        """
+        Returns a list of UNSD countries/areas (names only) associated with a Heritage Site.
+        Note that not all Heritage Sites are associated with a country/area (e.g., Old City
+        Walls of Jerusalem). In such cases the Queryset will return as <QuerySet [None]> and the
+        list will need to be checked for None or a TypeError (sequence item 0: expected str
+        instance, NoneType found) runtime error will be thrown.
+        :return: string
+        """
+        #countries = self.country_area.select_related('location').order_by('country_area_name')
+        countries = CountryArea.objects.select_related('location')
+
+        names = []
+        for country in countries:
+            name = country.country_area_name
+            if name is None:
+                continue
+            iso_code = country.iso_alpha3_code
+
+            name_and_code = ''.join([name, ' (', iso_code, ')'])
+            if name_and_code not in names:
+                names.append(name_and_code)
+
+        return ', '.join(names)
+    
+    @property
+    def region_names(self):
+        """
+        Returns a list of UNSD regions (names only) associated with a Heritage Site.
+        Note that not all Heritage Sites are associated with a region. In such cases the
+        Queryset will return as <QuerySet [None]> and the list will need to be checked for
+        None or a TypeError (sequence item 0: expected str instance, NoneType found) runtime
+        error will be thrown.
+        :return: string
+        """
+
+        # Add code that uses self to retrieve a QuerySet composed of regions, then loops over it
+        # building a list of region names, before returning a comma-delimited string of names.
+        #countries = self.country_area.select_related('location')
+        countries = self.country_area.select_related('location')
+
+        names = []
+        for country_area in countries:
+            name = country_area.location.region.region_name
+            if name is None:
+                continue
+            #iso_code = country.iso_alpha3_code
+
+            name_and_code = ''.join([name])
+            if name_and_code not in names:
+                names.append(name_and_code)
+        return ', '.join(names)
+
+    
+    @property
+    def indicator_names(self):
+        """
+        Returns a list of UNSD regions (names only) associated with a Heritage Site.
+        Note that not all Heritage Sites are associated with a region. In such cases the
+        Queryset will return as <QuerySet [None]> and the list will need to be checked for
+        None or a TypeError (sequence item 0: expected str instance, NoneType found) runtime
+        error will be thrown.
+        :return: string
+        """
+
+        # Add code that uses self to retrieve a QuerySet composed of regions, then loops over it
+        # building a list of region names, before returning a comma-delimited string of names.
+        indicators = self.indicator.select_related('indicator_value_type')
+        #indicators = Indicator.objects.all()
+        
+
+        names = []
+        for indicator in indicators:
+            name = indicator.indicator_value_type.indicator_value_name
+            if name is None:
+                continue
+            #iso_code = country.iso_alpha3_code
+
+            name_and_code = ''.join([name])
+            if name_and_code not in names:
+                names.append(name_and_code)
+        return ', '.join(names)
+    
+    @property
+    def target_names(self):
+        """
+        Returns a list of UNSD regions (names only) associated with a Heritage Site.
+        Note that not all Heritage Sites are associated with a region. In such cases the
+        Queryset will return as <QuerySet [None]> and the list will need to be checked for
+        None or a TypeError (sequence item 0: expected str instance, NoneType found) runtime
+        error will be thrown.
+        :return: string
+        """
+
+        # Add code that uses self to retrieve a QuerySet composed of regions, then loops over it
+        # building a list of region names, before returning a comma-delimited string of names.
+        indicators = self.indicator.select_related('target')
+
+        names = []
+        for indicator in indicators:
+            name = indicator.target.target_name
+            if name is None:
+                continue
+            #iso_code = country.iso_alpha3_code
+
+            name_and_code = ''.join([name])
+            if name_and_code not in names:
+                names.append(name_and_code)
+        return ', '.join(names)
+    
+    @property
+    def goal_names(self):
+        """
+        Returns a list of UNSD regions (names only) associated with a Heritage Site.
+        Note that not all Heritage Sites are associated with a region. In such cases the
+        Queryset will return as <QuerySet [None]> and the list will need to be checked for
+        None or a TypeError (sequence item 0: expected str instance, NoneType found) runtime
+        error will be thrown.
+        :return: string
+        """
+
+        # Add code that uses self to retrieve a QuerySet composed of regions, then loops over it
+        # building a list of region names, before returning a comma-delimited string of names.
+        indicators = self.indicator.select_related('target')
+
+        names = []
+        for indicator in indicators:
+            name = indicator.target.goal.goal_name
+            if name is None:
+                continue
+            #iso_code = country.iso_alpha3_code
+
+            name_and_code = ''.join([name])
+            if name_and_code not in names:
+                names.append(name_and_code)
+        return ', '.join(names)
+    
+
 
 class DevStatus(models.Model):
     dev_status_id = models.AutoField(primary_key=True)
