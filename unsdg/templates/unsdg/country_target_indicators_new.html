@@ -19,9 +19,33 @@
     </div>
 
     <div class="row">
-        <div class="col-6">
-            {{ form.indicator_value|as_crispy_field }}
-        </div>
+      <div class="col-6">
+          {{ form.countrycode|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+          {{ form.seriescode|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+          {{ form.indicator|as_crispy_field }}
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-6">
+          {{ form.indicator_value|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+          {{ form.year|as_crispy_field }}
+      </div>
     </div>
 
     <button type="submit" class="btn btn-outline-success">Add</button>

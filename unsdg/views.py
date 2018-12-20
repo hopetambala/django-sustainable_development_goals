@@ -82,7 +82,7 @@ class CTIndicatorCreateView(generic.View):
 	model = CountryTargetIndicator
 	form_class = CountryTargetIndicatorForm
 	success_message = "Indicator created successfully"
-	template_name = 'unsdg/site_new.html'
+	template_name = 'unsdg/country_target_indicators_new.html'
 	# fields = '__all__' <-- superseded by form_class
 	# success_url = reverse_lazy('heritagesites/site_list')
 
@@ -95,10 +95,12 @@ class CTIndicatorCreateView(generic.View):
 			print('Valid Form')
 			ctindicator = form.save(commit=False)
 			ctindicator.save()
-			
+		
 			for country in form.cleaned_data['country_area']:
-				CountryTargetIndicator.objects.create(country_target_indicator=ctindicator, country_area=country)
-
+				CountryArea.objects.create(country_target_indicator=ctindicator, country_area=country)
+			
+			for indicator in form.cleaned_data['indicator']:
+				Indicator.objects.create(country_target_indicator=ctindicator,indicator=indicator)
 			'''
 			for goal in form.cleaned_data['goal']:
 				Goal.objects.create(country_target_indicator=ctindicator, goal=goal)
