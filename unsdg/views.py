@@ -67,6 +67,7 @@ class CountryTargetIndicatorDetailView(generic.DetailView):
 		# And so on for more models
 		return context
 
+@method_decorator(login_required, name='dispatch')
 class IndicatorNameListView(generic.ListView):
 	model = IndicatorValueType
 	context_object_name = 'indicator_name_list'
@@ -75,7 +76,6 @@ class IndicatorNameListView(generic.ListView):
 
 	def get_queryset(self):
 		return IndicatorValueType.objects.all()
-
 
 @method_decorator(login_required, name='dispatch')
 class CTIndicatorCreateView(generic.View):
@@ -98,14 +98,10 @@ class CTIndicatorCreateView(generic.View):
 		
 			for country in form.cleaned_data['country_area']:
 				CountryArea.objects.create(country_target_indicator=ctindicator, country_area=country)
-			
+			'''
 			for indicator in form.cleaned_data['indicator']:
 				Indicator.objects.create(country_target_indicator=ctindicator,indicator=indicator)
 			'''
-			for goal in form.cleaned_data['goal']:
-				Goal.objects.create(country_target_indicator=ctindicator, goal=goal)
-			'''
-
 
 			return redirect(ctindicator) # shortcut to object's get_absolute_url()
 			# return HttpResponseRedirect(site.get_absolute_url())
@@ -115,10 +111,11 @@ class CTIndicatorCreateView(generic.View):
 		form = CountryTargetIndicatorForm()
 		return render(request, 'unsdg/country_target_indicators_new.html', {'form': form})
 
+@method_decorator(login_required, name='dispatch')
 class CTIndicatorUpdateView(generic.UpdateView):
 	model = CountryTargetIndicator
 	form_class = CountryTargetIndicatorForm
-	context_object_name = 'country_target_indicator'
+	context_object_name = 'ctindicator'
 	# pk_url_kwarg = 'site_pk'
 	success_message = "Country Target Indicator updated successfully"
 	template_name = 'unsdg/country_target_indicators_update.html'
