@@ -1,0 +1,144 @@
+{% extends 'unsdg/base.html' %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+  
+  {% for item in cti_list %}
+  <header>
+    <div class="row">
+      <div class="col-sm-10">
+        <h1>{{ item.country_area.country_area_name | safe }}</h2>
+      </div>
+      <div class="col-xs-1">
+        {% if user.is_authenticated %}
+          <a class="btn btn-outline-secondary" href="{% url 'indicator_update' item.pk %}">Edit</a>
+        {% endif %}
+      </div>
+      <div class="col-xs-1">
+        {% if user.is_authenticated %}
+          &nbsp;<a class="btn btn-outline-warning" href="{% url 'indicator_delete' item.pk %}">Delete</a>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  {% if site.region_names %}
+      <div class="row">
+        <div class="col-sm-2">
+          <p>Region</p>
+        </div>
+        <div class="col-sm-10">
+          <p>{{ site.region_names }}</p>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if site.sub_region_names %}
+      <div class="row">
+        <div class="col-sm-2">
+          <p>Subregion</p>
+        </div>
+        <div class="col-sm-10">
+          <p>{{ site.sub_region_names }}</p>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if site.intermediate_region_names %}
+      <div class="row">
+        <div class="col-sm-2">
+          <p>Intermediate Region</p>
+        </div>
+        <div class="col-sm-10">
+          <p>{{ site.intermediate_region_names }}</p>
+        </div>
+      </div>
+    {% endif %}
+  
+
+  {% if item.country_area.dev_status %}
+    <div class="row">
+      <!--div class="col-sm-2">
+        <p>Development Status</p>
+      </div-->
+      <div class="col-sm-10" >
+        <h6 style="color:rgb(142, 172, 52)">{{item.country_area.dev_status | safe}} </h4>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.indicator.target.goal.goal_name %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Goal</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.indicator.target.goal.goal_name | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.indicator.target.target_name %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Target</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.indicator.target.target_name | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.indicator.indicator_value_type.indicator_value_name %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Indicator</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.indicator.indicator_value_type.indicator_value_name | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.indicator_value %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Indicator Value</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.indicator_value | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.country_area.location.sub_region.sub_region_name %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Sub-region Name</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.country_area.location.sub_region.sub_region_name | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+
+  {% if item.country_area.dev_status %}
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Development Status</p>
+      </div>
+      <div class="col-sm-10">
+        {{item.country_area.dev_status | safe}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% endfor %}
+{% else %}
+  <a href="{% url 'login' %}">Log in</a>
+{% endif %}
+
+
+
+{% endblock content %}

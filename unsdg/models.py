@@ -7,7 +7,7 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 from django.urls import reverse
-
+from django.db.models import F
 
 
 class CountryArea(models.Model):
@@ -30,7 +30,8 @@ class CountryArea(models.Model):
 
 
 class CountryTargetIndicator(models.Model):
-    country_target_indicator_id = models.IntegerField(primary_key=True)
+    #country_target_indicator_id = models.IntegerField(primary_key=True)
+    country_target_indicator_id = models.AutoField(primary_key=True)
     countrycode = models.CharField(max_length=255, blank=True, null=True)
     country_area = models.ForeignKey(CountryArea, models.DO_NOTHING, blank=True, null=True)
     seriescode = models.CharField(max_length=255, blank=True, null=True)
@@ -51,7 +52,7 @@ class CountryTargetIndicator(models.Model):
     
     def get_absolute_url(self):
         #return reverse('country_target_indicator_detail', args=[str(self.id)])
-        return reverse('country_target_indicator_detail', kwargs={'pk': self.pk})
+        return reverse('country_target_indicator_details', kwargs={'pk': self.pk})
 
     @property
     def country_area_names(self):
@@ -192,7 +193,6 @@ class CountryTargetIndicator(models.Model):
         return ', '.join(names)
     
 
-
 class DevStatus(models.Model):
     dev_status_id = models.AutoField(primary_key=True)
     dev_status_name = models.CharField(unique=True, max_length=25)
@@ -228,11 +228,127 @@ class Indicator(models.Model):
     target = models.ForeignKey('Target', models.DO_NOTHING)
     indicator_value_type = models.ForeignKey('IndicatorValueType', models.DO_NOTHING)
 
+    #add indicator value here?
+
+    country_area = models.ManyToManyField(CountryArea, through='CountryTargetIndicator')
+
     class Meta:
         managed = False
         db_table = 'indicator'
-        
 
+    def get_absolute_url(self):
+        #return reverse('country_target_indicator_detail', args=[str(self.id)])
+        return reverse('indicator_detail', kwargs={'pk': self.pk})
+    
+    @property
+    def country_area_names(self):
+        """
+        Returns a list of UNSD countries/areas (names only) associated with a Heritage Site.
+        Note that not all Heritage Sites are associated with a country/area (e.g., Old City
+        Walls of Jerusalem). In such cases the Queryset will return as <QuerySet [None]> and the
+        list will need to be checked for None or a TypeError (sequence item 0: expected str
+        instance, NoneType found) runtime error will be thrown.
+        :return: string
+        """
+        countries = self.country_area.select_related('location').order_by('country_area_name')
+
+        names = []
+        for country in countries:
+            name = country.country_area_name
+            if name is None:
+                continue
+            iso_code = country.iso_alpha3_code
+
+            name_and_code = ''.join([name, ' (', iso_code, ')'])
+            if name_and_code not in names:
+                names.append(name_and_code)
+
+        return ', '.join(names)
+    
+    @property
+    def region_names(self):
+        """
+        Returns a list of UNSD regions (names only) associated with a Heritage Site.
+        Note that not all Heritage Sites are associated with a region. In such cases the
+        Queryset will return as <QuerySet [None]> and the list will need to be checked for
+        None or a TypeError (sequence item 0: expected str instance, NoneType found) runtime
+        error will be thrown.
+        :return: string
+        """
+
+        # Add code that uses self to retrieve a QuerySet composed of regions, then loops over it
+        # building a list of region names, before returning a comma-delimited string of names.
+        countries = self.country_area.select_related('location')
+
+        names = []
+        for country in countries:
+            name = country.location.region.region_name
+            if name is None:
+                continue
+            #iso_code = country.iso_alpha3_code
+
+            name_and_code = ''.join([name])
+            if name_and_code not in names:
+                names.append(name_and_code)
+        return ', '.join(names)
+
+    @property
+    def sub_region_names(self):
+        """
+        Returns a list of UNSD subregions (names only) associated with a Heritage Site.
+        Note that not all Heritage Sites are associated with a subregion. In such cases the
+        Queryset will return as <QuerySet [None]> and the list will need to be checked for
+        None or a TypeError (sequence item 0: expected str instance, NoneType found) runtime
+        error will be thrown.
+        :return: string
+        """
+
+        # Add code that uses self to retrieve a QuerySet, then loops over it building a list of
+        # sub region names, before returning a comma-delimited string of names using the string
+        # join method.
+        countries = self.country_area.select_related('location')
+
+        names = []
+        for country in countries:
+            name = country.location.sub_region.sub_region_name
+            if name is None:
+                continue
+            #iso_code = country.iso_alpha3_code
+
+            name_and_code = ''.join([name])
+            if name_and_code not in names:
+                names.append(name_and_code)
+        return ', '.join(names)
+
+    @property
+    def intermediate_region_names(self):
+        """
+        Returns a list of UNSD intermediate regions (names only) associated with a Heritage Site.
+        Note that not all Heritage Sites are associated with an intermediate region. In such
+        cases the Queryset will return as <QuerySet [None]> and the list will need to be
+        checked for None or a TypeError (sequence item 0: expected str instance, NoneType found)
+        runtime error will be thrown.
+        :return: string
+        """
+
+        # Add code that uses self to retrieve a QuerySet, then loops over it building a list of
+        # intermediate region names, before returning a comma-delimited string of names using the
+        # string join method.
+
+        #Strange case where I had to do something different
+        intermediate_regions = self.country_area.select_related('location').values(name=F('location__intermediate_region__intermediate_region_name'))
+
+        names = []
+        for ir in intermediate_regions:
+            name = ir['name']
+            if name is None:
+                continue
+            name_and_code = ''.join([name])
+            if name_and_code not in names:
+                names.append(name_and_code)
+        return ', '.join(names)
+
+        
 class IndicatorValueType(models.Model):
     indicator_value_type_id = models.AutoField(primary_key=True)
     indicator_value_name = models.CharField(max_length=255, blank=True, null=True)
