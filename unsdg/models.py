@@ -33,9 +33,11 @@ class CountryTargetIndicator(models.Model):
     #country_target_indicator_id = models.IntegerField(primary_key=True)
     country_target_indicator_id = models.AutoField(primary_key=True)
     countrycode = models.CharField(max_length=255, blank=True, null=True)
-    country_area = models.ForeignKey(CountryArea, models.DO_NOTHING, blank=True, null=True)
+    #country_area = models.ForeignKey(CountryArea, models.DO_NOTHING, blank=True, null=True)
+    country_area = models.ForeignKey(CountryArea, on_delete=models.CASCADE, blank=True, null=True)
     seriescode = models.CharField(max_length=255, blank=True, null=True)
-    indicator = models.ForeignKey('Indicator', models.DO_NOTHING, blank=True, null=True)
+    #indicator = models.ForeignKey('Indicator', models.DO_NOTHING, blank=True, null=True)
+    indicator = models.ForeignKey('Indicator', on_delete=models.CASCADE, blank=True, null=True)
     indicator_value = models.CharField(db_column='Indicator_Value', max_length=255, blank=True, null=True)  # Field name made lowercase.
     #year = models.TextField(blank=True, null=True)  # This field type is a guess.
     year = models.IntegerField(blank=True, null=True)
@@ -225,8 +227,8 @@ class Goal(models.Model):
 
 class Indicator(models.Model):
     indicator_id = models.AutoField(primary_key=True)
-    target = models.ForeignKey('Target', models.DO_NOTHING)
-    indicator_value_type = models.ForeignKey('IndicatorValueType', models.DO_NOTHING)
+    target = models.ForeignKey('Target', on_delete=models.PROTECT)
+    indicator_value_type = models.ForeignKey('IndicatorValueType', on_delete=models.PROTECT)
 
     #add indicator value here?
 

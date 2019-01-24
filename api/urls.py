@@ -2,7 +2,7 @@ from django.urls import include, path
 from rest_framework.documentation import include_docs_urls
 from rest_framework.routers import SimpleRouter
 from rest_framework_swagger.views import get_swagger_view
-from api.views import CTIndicatorViewSet
+from api.views import IndicatorViewSet
 
 API_TITLE = 'unsdg API'
 API_DESC = 'A web API for creating, modifying and deleting United Nations Indicators.'
@@ -24,7 +24,7 @@ schema_view = get_schema_view(
 '''
 
 router = SimpleRouter()
-router.register(r'cti', CTIndicatorViewSet, base_name='cti')
+router.register(r'cti', IndicatorViewSet, base_name='cti')
 # urlpatterns = router.urls
 
 # The API URLs are now determined automatically by the router.
