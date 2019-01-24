@@ -231,8 +231,18 @@ class Indicator(models.Model):
     indicator_value_type = models.ForeignKey('IndicatorValueType', on_delete=models.PROTECT)
 
     #add indicator value here?
-
+    #multiple
     country_area = models.ManyToManyField(CountryArea, through='CountryTargetIndicator')
+
+    '''
+    country_areas = models.ManyToManyField(
+        CountryArea,
+        through='CountryTargetIndicators',
+        related_name='indicators'
+    )
+    #django reverse key lookup
+    '''
+
 
     class Meta:
         managed = False
