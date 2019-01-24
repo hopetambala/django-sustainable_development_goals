@@ -142,7 +142,6 @@ class IndicatorSerializer(serializers.ModelSerializer):
             .values_list('country_area_id', flat=True) \
             .filter(indicator_id__exact=indicator_id)
 
-        # TODO Insert may not be required (Just return instance)
 
         # Insert new unmatched country entries
         for country in new_countries:
