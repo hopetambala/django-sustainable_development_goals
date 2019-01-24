@@ -114,7 +114,7 @@ class IndicatorUpdateView(generic.UpdateView):
 				continue
 			else:
 				CountryTargetIndicator.objects \
-					.filter(indicator_id=indicator.indicator_indicator_id, country_area_id=old_id) \
+					.filter(indicator_id=indicator.indicator_id, country_area_id=old_id) \
 					.delete()
 
 		return HttpResponseRedirect(indicator.get_absolute_url())
@@ -124,7 +124,7 @@ class IndicatorUpdateView(generic.UpdateView):
 class IndicatorDeleteView(generic.DeleteView):
 	model = Indicator
 	success_message = "Indicator deleted successfully"
-	success_url = reverse_lazy('indicator')
+	success_url = reverse_lazy('country_target_indicator_filter')
 	context_object_name = 'indicator'
 	template_name = 'unsdg/indicator_delete.html'
 
