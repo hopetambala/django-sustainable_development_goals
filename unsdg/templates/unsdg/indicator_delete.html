@@ -11,7 +11,7 @@
     <p>"{{indicator.indicator_value_type}}</p>
     
     <button type="submit" class="btn btn-outline-danger">Delete</button>
-    &nbsp;<a class="btn btn-outline-secondary" href="{% url 'country_target_indicators' %}">Cancel</a>
+    &nbsp;<a class="btn btn-outline-secondary" href="{% url 'indicator_detail' indicator.pk %}">Cancel</a>
   </form>
 
   {% endblock content %}
