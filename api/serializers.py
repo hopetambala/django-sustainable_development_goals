@@ -71,29 +71,48 @@ class CountryTargetIndicatorSerializer(serializers.ModelSerializer):
 	    fields = ('indicator_id', 'country_area_id')
 
 class IndicatorSerializer(serializers.ModelSerializer):
-    target = serializers.PrimaryKeyRelatedField(
+    target = TargetSerializer(
+		many=False,
+		read_only=True
+	)
+
+    target_id = serializers.PrimaryKeyRelatedField(
 		allow_null=False,
 		many=False,
 		write_only=True,
 		queryset=Target.objects.all(),
-		#source='target'
+		source='target'
 	)
-    indicator_value_type = serializers.PrimaryKeyRelatedField(
+
+    indicator_value_type = IndicatorValueTypeSerializer(
+		many=False,
+		read_only=True
+	)
+
+    indicator_value_type_id = serializers.PrimaryKeyRelatedField(
 		allow_null=False,
 		many=False,
 		write_only=True,
 		queryset=IndicatorValueType.objects.all(),
-		#source='indicator_value_type'
+		source='indicator_value_type'
 	)
+    
     country_target_indicator = CountryTargetIndicatorSerializer(
 		source='country_target_indicator_set', # Note use of _set
 		many=True,
 		read_only=True
 	)
+
+    country_target_indicator_ids = serializers.PrimaryKeyRelatedField(
+		many=True,
+		write_only=True,
+		queryset=CountryTargetIndicator.objects.all(),
+		source='country_target_indicator'
+	)
 	
     class Meta:
         model = Indicator
-        fields = ('indicator_id', 'target','indicator_value_type','country_target_indicator')
+        fields = ('indicator_id','target', 'target_id','indicator_value_type','indicator_value_type_id','country_target_indicator','country_target_indicator_ids')
     
     def create(self, validated_data):
         """
